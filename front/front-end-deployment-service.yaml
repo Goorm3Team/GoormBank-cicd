@@ -17,10 +17,40 @@ spec:
     spec:
       containers:
       - name: front-end-app
-        image: 580103579984.dkr.ecr.ap-northeast-2.amazonaws.com/goorm3team/goormbank:Frontend24
+        image: 580103579984.dkr.ecr.ap-northeast-2.amazonaws.com/goorm3team/goormbank:3.0.0
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+#apiVersion: apps/v1
+#kind: Deployment
+#metadata:
+#  name: front-end-deployment
+#  namespace: front-end
+#  labels:
+#    app: front-end-app
+#spec:
+#  replicas: 1
+#  selector:
+#    matchLabels:
+#      app: front-end-app
+#  template:
+#    metadata:
+#      labels:
+#        app: front-end-app
+#    spec:
+#      containers:
+#      - name: front-end-app
+#        image: 580103579984.dkr.ecr.ap-northeast-2.amazonaws.com/goorm3team/goormbank:Frontend24
+#        imagePullPolicy: Always
+#        ports:
+#        - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
