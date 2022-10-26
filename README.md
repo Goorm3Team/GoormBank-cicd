@@ -1,2 +1,2 @@
 # goormbank-cicd
-CI/CD
+CI/CD manifest
