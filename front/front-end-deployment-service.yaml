@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: front-end-app
-        image: 580103579984.dkr.ecr.ap-northeast-2.amazonaws.com/goorm3team/goormbank:Frontend52
+        image: 580103579984.dkr.ecr.ap-northeast-2.amazonaws.com/goorm3team/goormbank:Frontend
         resources:
           requests:
             memory: "512Mi"
@@ -47,7 +47,7 @@ spec:
 #    spec:
 #      containers:
 #      - name: front-end-app
-#        image: 580103579984.dkr.ecr.ap-northeast-2.amazonaws.com/goorm3team/goormbank:Frontend52
+#        image: 580103579984.dkr.ecr.ap-northeast-2.amazonaws.com/goorm3team/goormbank:Frontend
 #        imagePullPolicy: Always
 #        ports:
 #        - containerPort: 80
