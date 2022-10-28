@@ -17,7 +17,10 @@ spec:
     spec:
       containers:
         - name: spring-boot
-          image: 580103579984.dkr.ecr.ap-northeast-2.amazonaws.com/goorm3team/goormbank:Backend47
+          image: 580103579984.dkr.ecr.ap-northeast-2.amazonaws.com/goorm3team/goormbank:Backend63
+          env:
+            - name: spring.profiles.active
+              value: prod
           ports:
             - name: boot-port
               containerPort: 8080
